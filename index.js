@@ -7,7 +7,6 @@ function findMatching(drivers, nameValue1) {
   }
   return listOfName;
 }
-console.log(findMatching(drivers, "Bobby"));
 
 function fuzzyMatch(drivers, nameValue2) {
   const beginsWith = [];
@@ -18,10 +17,8 @@ function fuzzyMatch(drivers, nameValue2) {
   }
   return beginsWith;
 }
-console.log(fuzzyMatch(drivers, "S"));
 
 function matchName(drivers, nameValue3) {
   return drivers.filter(match => match.name === nameValue3);
 }
 const matchingNames = matchName(drivers, "Bobby");
-console.log(matchingNames); 
