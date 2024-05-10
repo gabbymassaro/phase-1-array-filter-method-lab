@@ -1,5 +1,3 @@
-const drivers = ["Bobby", "Sammy", "Sally", "Annette", "Sarah", "Bobby"];
-
 function findMatching(drivers, value) {
   const listOfName = [];
   for (const name of drivers) {
@@ -22,9 +20,8 @@ function fuzzyMatch(drivers, value2) {
 }
 console.log(fuzzyMatch(drivers, "S"));
 
-
-
-
-function matchName() {
-
+function matchName(drivers, value3) {
+  return drivers.filter(match => match.name === value3);
 }
+const matchingNames = matchName(drivers, "Bobby");
+console.log(matchingNames); 
