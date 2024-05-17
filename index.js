@@ -1,24 +1,11 @@
-function findMatching(drivers, nameValue1) {
-  const listOfName = [];
-  for (const name of drivers) {
-    if (name.toLowerCase() === nameValue1.toLowerCase()) {
-      listOfName.push(name);
-    }
-  }
-  return listOfName;
-}
+const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
 
-function fuzzyMatch(drivers, nameValue2) {
-  const beginsWith = [];
-  for (const name of drivers) {
-    if (name.startsWith(nameValue2) === nameValue2.startsWith(nameValue2)) {
-      beginsWith.push(name);
-    }
-  }
-  return beginsWith;
-}
+// findMatching- This function takes an array of drivers' 
+// names and a string as arguments, and returns the matching 
+// list of drivers. The function should be case insensitive.
 
-function matchName(drivers, nameValue3) {
-  return drivers.filter(match => match.name === nameValue3);
+function findMatching(drivers, name) {
+  return drivers.filter((item) => item.toLowerCase() === name.toLowerCase())
 }
-const matchingNames = matchName(drivers, "Bobby");
+console.log(findMatching(drivers, "Bobby"))
+//console.log(findMatching(drivers, "Bobby"))
