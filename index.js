@@ -1,11 +1,11 @@
-const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
-
-// findMatching- This function takes an array of drivers' 
-// names and a string as arguments, and returns the matching 
-// list of drivers. The function should be case insensitive.
-
 function findMatching(drivers, name) {
   return drivers.filter((item) => item.toLowerCase() === name.toLowerCase())
 }
-console.log(findMatching(drivers, "Bobby"))
-//console.log(findMatching(drivers, "Bobby"))
+
+function fuzzyMatch(drivers, name) {
+  return drivers.filter((letter) => letter.charAt(0) === name.charAt(0))
+}
+
+function matchName(drivers, nameValue3) {
+  return drivers.filter(match => match.name === nameValue3);
+}
